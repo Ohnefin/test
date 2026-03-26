@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inveniam</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3%3Cdefs%3%3Cstyle%3.cls-1{fill:%23ffffff;font-family:courier;font-size:50px;font-weight:bold;}%3C/style%3%3C/defs%3%3Crect width='100' height='100' rx='20' fill='%23000000'/%3%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' class='cls-1'%3JP%3C/text%3%3C/svg%3">
+
     <style>
         :root {
-            /* Un negro ligeramente menos puro para evitar fatiga visual */
             --bg-color: #080808; 
-            /* Un blanco roto/gris muy claro para el texto */
             --text-color: #e0e0e0;
-            /* Gris oscuro para la línea decorativa */
             --accent-color: #333;
         }
 
@@ -22,48 +22,38 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            /* Fuente monoespaciada limpia */
             font-family: 'Courier New', Courier, monospace;
             overflow: hidden;
-            /* Evita el cursor de selección de texto para mantener estética */
             cursor: default;
         }
 
         .content {
             text-align: center;
             padding: 20px;
-            /* Animación de entrada: suave, una sola vez */
             animation: fadeInOnce 1.5s ease-out forwards;
         }
 
         h1 {
-            font-size: 1.4rem;
+            /* Un poco más pequeño para mayor elegancia */
+            font-size: 1.25rem; 
             font-weight: 100;
             letter-spacing: 0.35em;
             text-transform: uppercase;
             margin: 0;
-            /* Nitidez máxima una vez cargada */
             opacity: 1;
             user-select: none;
         }
 
         .line {
             height: 1px;
-            width: 80px; /* Ancho fijo */
+            width: 80px; 
             background-color: var(--accent-color);
             margin: 25px auto 0 auto;
         }
 
-        /* Definición de la única animación de entrada */
         @keyframes fadeInOnce {
-            0% { 
-                opacity: 0; 
-                transform: translateY(5px); /* Pequeño desplazamiento hacia arriba */
-            }
-            100% { 
-                opacity: 1; 
-                transform: translateY(0);
-            }
+            0% { opacity: 0; transform: translateY(5px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
 
         /* Responsive para móviles */
